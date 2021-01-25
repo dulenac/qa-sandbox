@@ -32,7 +32,7 @@ public class DriverCreation {
     }
 
     /**
-     * This method open url in browser with coosen driver
+     * This method open url in browser with chosen driver
      *
      * @param url
      */

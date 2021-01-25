@@ -10,6 +10,11 @@ import util.DriverCreation;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This test delete existing use cases by API, logs in qa-sandbox app, create 4 use cases by filling up input fields with
+ * random created strings and edit all filled input fields with text "This field previously had: " + no. of characters in
+ * previous string
+ */
 public class T001LoginIntoAppTest extends DriverCreation {
 
 
@@ -37,7 +42,7 @@ public class T001LoginIntoAppTest extends DriverCreation {
         for (int i = 0; i < 4; i++) {
 
 
-            CreateUseCaseView createUseCaseView  = useCaseView.createUseCase();
+            CreateUseCaseView createUseCaseView = useCaseView.createUseCase();
             title.add(createRandomString());
             createUseCaseView.setTitle(title.get(i)).setDescription(createRandomString()).setUseCaseAutomated(true)
                     .setExpectedResult(createRandomString()).setTextInUseCase(1, createRandomString()).addStep()
@@ -49,12 +54,12 @@ public class T001LoginIntoAppTest extends DriverCreation {
 
             CreateUseCaseView editUseCaseView = useCaseView.openUseCase(title.get(i));
 
-            editUseCaseView.setTitle("This field previously had: " + editUseCaseView.getNumberOfCharactersFromTitle())
-                    .setDescription("This field previously had: " + editUseCaseView.getNumberOfCharactersFromDescription())
-                    .setExpectedResult("This field previously had: " + editUseCaseView.getNumberOfCharactersFromExpectedResult())
-                    .setTextInUseCase(1, "This field previously had: " + editUseCaseView.getNumberOfCharactersFromStep(1))
-                    .setTextInUseCase(2, "This field previoysly had: " + editUseCaseView.getNumberOfCharactersFromStep(2))
-                    .setTextInUseCase(3, "This field previously had: " + editUseCaseView.getNumberOfCharactersFromStep(3)).submit();
+            editUseCaseView.setTitle("This field previously had: " + editUseCaseView.getNumberOfCharactersFromTitle() + " characters")
+                    .setDescription("This field previously had: " + editUseCaseView.getNumberOfCharactersFromDescription() + " characters")
+                    .setExpectedResult("This field previously had: " + editUseCaseView.getNumberOfCharactersFromExpectedResult() + " characters")
+                    .setTextInUseCase(1, "This field previously had: " + editUseCaseView.getNumberOfCharactersFromStep(1) + " characters")
+                    .setTextInUseCase(2, "This field previoysly had: " + editUseCaseView.getNumberOfCharactersFromStep(2) + " characters")
+                    .setTextInUseCase(3, "This field previously had: " + editUseCaseView.getNumberOfCharactersFromStep(3) + " characters").submit();
 
 
         }

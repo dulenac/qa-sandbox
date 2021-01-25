@@ -68,7 +68,7 @@ public class Base extends DriverCreation {
     }
 
     public String getAttributeValue(By locator, String attribute) {
-        //waitForVisible(locator);
+
         return getDriver().findElement(locator).getAttribute(attribute);
     }
 

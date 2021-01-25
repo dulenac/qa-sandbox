@@ -32,6 +32,11 @@ public class CreateUseCaseView extends Base {
     private By AUTOMATED_SWITCH_BUTTON = By.xpath("//input[@name='automated-switch']");
     private By CLICK_AUTOMATED = By.xpath("//div[@class='float-right']//label");
 
+    /**
+     * This method check if Use case is automated, 'Automated' switch status
+     *
+     * @return boolean 'selected'
+     */
     private boolean isAutomatedSelected() {
         boolean selected = false;
 
@@ -42,10 +47,16 @@ public class CreateUseCaseView extends Base {
         return selected;
     }
 
+    /**
+     * This method set 'Automated' switch on or off
+     *
+     * @param select
+     * @return CreateUseCaseView object
+     */
     public CreateUseCaseView setUseCaseAutomated(boolean select) {
 
-        boolean bla = isAutomatedSelected();
-        if (select != bla) {
+        boolean automatedStatus = isAutomatedSelected();
+        if (select != automatedStatus) {
             click(CLICK_AUTOMATED);
         }
         return this;
