@@ -43,7 +43,7 @@ public class DriverCreation {
 
     private void createChromeDriver() {
 
-        System.setProperty("webdriver.chrome.driver", "/Users/dulenac/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "pathToYourChromdriverLocation");
         _driver = new ChromeDriver();
 
 
