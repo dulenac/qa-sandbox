@@ -14,7 +14,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.13.1</junit.version>
-        <xml-apis.version>4.13.1</xml-apis.version>
         <selenium.version>3.141.59</selenium.version>
         <commons-lang3.version>3.0</commons-lang3.version>
         <rest-assured.version>4.3.0</rest-assured.version>
@@ -49,11 +48,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-            <version>${xml-apis.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
