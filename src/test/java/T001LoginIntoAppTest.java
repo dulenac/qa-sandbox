@@ -34,7 +34,7 @@ public class T001LoginIntoAppTest extends DriverCreation {
 
         Login login = new Login();
 
-        DashboardView dashboardView = login.openLoginDialog().setUserName("decoderkg@gmail.com").setPassword("dtodorovickg").submit();
+        DashboardView dashboardView = login.openLoginDialog().setUserName("username").setPassword("password").submit();
 
         UseCaseView useCaseView = dashboardView.selectUseCases();
 
