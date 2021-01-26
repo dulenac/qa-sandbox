@@ -28,6 +28,7 @@ To run this test follow these steps:
 ChromeDriver location (System.setProperty("webdriver.chrome.driver", "**pathToYourChromdriverLocation**");)
 4. In test class /src/test/java/T001LoginIntoAppTest set username and password of my registered account in line 37.
 Username and password are sent by E-mail.
+5. Open /src/test/java/T001LoginIntoAppTest class in your IDE and run test.
 
 ## Contact
 If you want to contact me you can reach me at decoderkg@gmail.com
