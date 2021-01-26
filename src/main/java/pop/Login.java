@@ -12,6 +12,17 @@ public class Login extends Base {
 
     private By BUTTON_SUBMIT = By.xpath("//button[@data-testid='submit_btn']");
 
+    private By BUTTON_LOGIN = By.xpath("//a[@href='/login']");
+
+    /**
+     * This method clicks on 'Login' button
+     *
+     * @return Login object
+     */
+    public Login openLoginDialog() {
+        click(BUTTON_LOGIN);
+        return this;
+    }
 
     /**
      * This method writes text in 'username input field'

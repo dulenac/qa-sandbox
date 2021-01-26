@@ -30,11 +30,11 @@ public class T001LoginIntoAppTest extends DriverCreation {
     public void loginIntoSandbox() {
 
 
-        openUrl("https://qa-sandbox.apps.htec.rs/login");
+        openUrl("https://qa-sandbox.apps.htec.rs");
 
         Login login = new Login();
 
-        DashboardView dashboardView = login.setUserName("usename").setPassword("password").submit();
+        DashboardView dashboardView = login.openLoginDialog().setUserName("decoderkg@gmail.com").setPassword("dtodorovickg").submit();
 
         UseCaseView useCaseView = dashboardView.selectUseCases();
 
