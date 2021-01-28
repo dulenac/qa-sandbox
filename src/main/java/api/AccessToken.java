@@ -6,7 +6,7 @@ import io.restassured.http.ContentType;
 
 public class AccessToken {
 
-    public static String userToken = getAccessTokenForUser("decoderkg@gmail.com", "dtodorovickg");
+    public static String userToken = getAccessTokenForUser("username", "password");
 
     public static final String getAccessTokenForUser(String username, String password) {
         return RestAssured.given()

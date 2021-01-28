@@ -6,7 +6,7 @@ This is Selenium test writen in JAVA drived by Junit.
 Test checks if any 'Use case' already created and delete them. This is done by API(using REST ASSURED).
 
 Test login and goes thru the part of HTEC QA-sandbox app UI and creates 4 use cases in 'Use cases' section.
-'Use cases' are created with random generated strings and all of 'Use cases' are marked as 'Automated'.
+'Use cases' are created with random generated strings for input fields and all of 'Use cases' are marked as 'Automated'.
 After 'Use cases' creation, test edits all 'Use cases' fields by replacing it with string "_**This field previously had:**_ " +
 no. of characters in the previous string of each field + "_**characters**_".
 
@@ -26,10 +26,12 @@ To run this test follow these steps:
 2. Build project using Maven with 'Skip Test' argument:
 `mvn clean install -DskipTests`
 3. In class /src/main/java/util/DriverCreation go to 'createChromeDriver' method in line 46. and set path to your local
-ChromeDriver location (System.setProperty("webdriver.chrome.driver", "**pathToYourChromdriverLocation**");)
+ChromeDriver location (System.setProperty("webdriver.chrome.driver", "**path/to/your/chromedriver/location**");)
 4. In test class /src/test/java/T001LoginIntoAppTest set username and password of my registered account in line 37.
 Username and password are sent in comment of my exam.
-6. Open /src/test/java/T001LoginIntoAppTest class and run test with `mvn clean install`
+5. In test class /src/main/java/api/models/AccessToken set username and password of my registered account in line 9.
+Username and password are sent in comment of my exam.
+6. From /home/path/to/project/ run test with `mvn clean install`
 7. To see generated allure report run `allure serve` in /home/path/to/project/target/ Generated allure report opens in
 default browser tab.
 
