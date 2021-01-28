@@ -28,7 +28,7 @@ To run this test follow these steps:
 3. In class /src/main/java/util/DriverCreation go to 'createChromeDriver' method in line 46. and set path to your local
 ChromeDriver location (System.setProperty("webdriver.chrome.driver", "**pathToYourChromdriverLocation**");)
 4. In test class /src/test/java/T001LoginIntoAppTest set username and password of my registered account in line 37.
-Username and password are sent by E-mail.
+Username and password are sent in comment of my exam.
 6. Open /src/test/java/T001LoginIntoAppTest class and run test with `mvn clean install`
 7. To see generated allure report run `allure serve` in /home/path/to/project/target/ Generated allure report opens in
 default browser tab.
